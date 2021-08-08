@@ -11,7 +11,7 @@
 
 <body>
     <form >
-        <header class= "headerContainer" style="background-color: rgb(240, 132, 93)"><h1>Employee Registration Form</h1></header>
+        <header class= "headerContainer" style="background-color: rgb(226, 144, 114)"><h1>Employee Registration Form</h1></header>
         <div>
             <label for="text">Text Input for Name : </label>
             <input type="text" id="name" name="name" required>
@@ -89,19 +89,7 @@
               emailError.emailContent = "";
            else emailError.emailContent = "Email is InValid";
         });
-
-        //Mobile number validation
-        const number = document.querySelector('#tel');
-        const numberError = document.querySelector('.tel-error');
-        number.addEventListener('input', function () {
-            let numberRegex = RegExp('^[1-9]{2}\\s{0,1}[1-9]{1}[0-9]{9}$');
-            if (numberRegex.test(number.value))
-                numberError.textContent = ' ';
-            else
-                numberError.textContent = 'Invalid Number!';
-        });  
-        
-        
+       
     </script>
 </body>
 </html>
