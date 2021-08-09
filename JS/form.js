@@ -1,3 +1,4 @@
+
 const salary=document.querySelector('#salary');
         const salaryOutput=document.querySelector('.salary-output')
         salary.addEventListener('input', function () {
@@ -22,7 +23,9 @@ const salary=document.querySelector('#salary');
         const email = document.querySelector('#email');
         const emailError = document.querySelector('.email-error');
         text.addEventListener('input', function() {
+           //let emailRegex = RegExp("^[A-Z a-z]{1,}([+-_.]*)[A-Z a-z 0-9 _+-.]*[@]{1}[A-Z a-z 0-9 +_-]{1,}[.]{1}[a-z]{2,3}([.]{1}[a-z]{2})*$");
            let emailRegex = RegExp("^[A-Z a-z]{1,}([+-_.]*)[A-Z a-z 0-9 _+-.]*[@]{1}[A-Z a-z 0-9 +_-]{1,}[.]{1}[a-z]{2,3}([.]{1}[a-z]{2})*$");
+           
            if(emailRegex.test(email.value))
               emailError.emailContent = "";
            else emailError.emailContent = "Email is InValid";
