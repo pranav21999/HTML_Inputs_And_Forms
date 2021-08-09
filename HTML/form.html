@@ -111,17 +111,22 @@
                 else
                 numberError.textContent = 'Invalid Number!';
         });  
-         //password validation minimum 8 characters
-         const pwd = document.querySelector('#pwd');
+       /*Password validation-: 
+       rule 1-password validation minimum 8 characters
+        rule 2-at least 1 upper case
+        rule 3-at least 1 numberic number
+        rule 4-exactly 1 special character
+        */
+        const pwd = document.querySelector('#pwd');
         const passworderror = document.querySelector('.pwd-error');
         pwd.addEventListener('input', function () {
-        let passwordpattern = RegExp('^[a-z A-Z 0-9 @#%!&*_]{8,}$');
+        let passwordpattern = RegExp('^[A-Z]{1}[1-9]{1}[a-z A-Z 1-9]{6,}$');
             if (passwordpattern.test(pwd.value))
                 passworderror.textContent = ' ';
             else
                 passworderror.textContent = 'Invalid Password!';
         });
-        
+         
     </script>
 </body>
 </html>
